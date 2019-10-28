@@ -9,6 +9,7 @@ $color-light: #fff;
 $color-one: #fdd135;
 $color-two: #777777;
 $color-three: #f7f7f7;
+$color-four: #212121;
 
 /* Global */
 
@@ -24,11 +25,10 @@ body {
 
 section {
   text-align: center;
-}
-
-section .container {
   padding: 120px 0;
 }
+
+
 
 .btn {
   background: $color-one;
@@ -222,6 +222,42 @@ section .container {
   }
 }
 
+/* Footer */
+
+.page-footer {
+  padding: 48px 0;
+
+  p {
+    float: left;
+    font-size: 14px;
+    font-family: $font-one;
+    padding: 0 80px 0 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      font-size: 0;
+      text-align: center;
+      padding: 0 10px 0 0;
+
+      i {
+        font-size: 20px;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        background: $color-four;
+        border-radius: 50%;
+        color: $color-light;
+      }
+    }
+  }
+}
+
 /* Media */
 
 @media (max-width: 767px) {
@@ -276,6 +312,16 @@ section .container {
 
     .open {
       display: block;
+    }
+  }
+
+  .page-footer {
+    padding: 30px 0;
+    text-align: center;
+
+    p {
+      padding: 0;
+      float: none;
     }
   }
 }
