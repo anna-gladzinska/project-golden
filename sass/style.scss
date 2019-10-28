@@ -5,6 +5,8 @@ $font-two: 'Roboto Slab', serif;
 
 $color-light: #fff;
 $color-one: #fdd135;
+$color-two: #777777;
+$color-three: #f7f7f7;
 
  /* Global */
 
@@ -14,6 +16,14 @@ $color-one: #fdd135;
 
 body {
   margin: 0;
+}
+
+section {
+  text-align: center;
+}
+
+section .container {
+  padding: 120px 0;
 }
 
 .btn {
@@ -26,28 +36,22 @@ body {
   font-weight: bold;
 }
 
-/* Header */
-
-.header {
-    background: url("../images/header.png");
-    height: 700px;
-    position: relative;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: 1;
-    &::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      opacity: 0.5;
-      content: '';
-      z-index: -1;
-    }
+.section-title {
+  font-family: $font-one;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
 }
+
+.section-subtitle {
+  font-family: $font-two;
+  font-size: 16px;
+  font-style: italic;
+  color: $color-two;
+  margin: 0 0 60px 0;
+}
+
+/* Navigation */
 
 .navigation {
   font-family: $font-one;
@@ -85,6 +89,29 @@ body {
   }
 }
 
+/* Header */
+
+.header {
+    background: url("../images/header.png");
+    height: 700px;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0.5;
+      content: '';
+      z-index: -1;
+    }
+}
+
 .header-inner {
     position: absolute;
     width: 100%;
@@ -106,6 +133,36 @@ body {
       font-weight: bold;
       font-size: 75px;
     }
+}
+
+/* Services */
+
+.services {
+  i {
+    color: $color-one;
+    border: 3px solid $color-one;
+    border-radius: 50%;
+    font-size: 35px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+  }
+  p {
+    &:first-of-type {
+      font-family: $font-one;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    &:last-of-type {
+      font-family: $font-two;
+      font-size: 14px;
+      color: $color-two;
+    }
+  }
+}
+
+.services-item {
+  margin: 0 0 20px 0;
 }
 
 /* Media */
@@ -155,7 +212,6 @@ body {
     }
     .open {
     display: block;
-
     }
   }
 }
@@ -164,7 +220,6 @@ body {
       h1 {
         font-size: 30px;
       }
-
       h2 {
         font-size: 50px;
       }
