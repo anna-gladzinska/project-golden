@@ -1,16 +1,20 @@
 /* Variables */
 
-$font-one: 'Montserrat', sans-serif;
-$font-two: 'Roboto Slab', serif;
+$font-one: 'Montserrat',
+sans-serif;
+$font-two: 'Roboto Slab',
+serif;
 
 $color-light: #fff;
 $color-one: #fdd135;
 $color-two: #777777;
 $color-three: #f7f7f7;
 
- /* Global */
+/* Global */
 
-*,*::after,*::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -37,6 +41,7 @@ section .container {
 }
 
 .section-title {
+  text-transform: uppercase;
   font-family: $font-one;
   font-size: 40px;
   font-weight: bold;
@@ -56,12 +61,15 @@ section .container {
 .navigation {
   font-family: $font-one;
   padding: 50px 0 0 0;
+
   .logo {
     float: left;
   }
+
   i {
     display: none;
   }
+
   ul {
     float: right;
     margin: 0;
@@ -69,18 +77,22 @@ section .container {
     list-style-type: none;
     text-align: right;
     z-index: 2;
+
     li {
       display: inline-block;
       margin: 0 40px 0 0;
+
       &:last-of-type {
         margin: 0;
       }
+
       a {
         color: $color-light;
         text-decoration: none;
         font-size: 14px;
         text-transform: uppercase;
         line-height: 28px;
+
         &:hover {
           color: $color-one;
         }
@@ -92,47 +104,50 @@ section .container {
 /* Header */
 
 .header {
-    background: url("../images/header.png");
-    height: 700px;
-    position: relative;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: 1;
-    &::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      opacity: 0.5;
-      content: '';
-      z-index: -1;
-    }
+  background: url("../images/header.png");
+  height: 700px;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    content: '';
+    z-index: -1;
+  }
 }
 
 .header-inner {
-    position: absolute;
-    width: 100%;
-    color: $color-light;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    h1 {
-      margin: 80px 0 20px 0;
-      font-family: $font-two;
-      font-style: italic;
-      font-size: 40px;
-    }
-    h2 {
-      margin: 0 0 60px 0;
-      font-family: $font-one;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 75px;
-    }
+  position: absolute;
+  width: 100%;
+  color: $color-light;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  h1 {
+    margin: 80px 0 20px 0;
+    font-family: $font-two;
+    font-style: italic;
+    font-size: 40px;
+  }
+
+  h2 {
+    margin: 0 0 60px 0;
+    font-family: $font-one;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 75px;
+  }
 }
 
 /* Services */
@@ -147,12 +162,14 @@ section .container {
     height: 70px;
     line-height: 70px;
   }
+
   p {
     &:first-of-type {
       font-family: $font-one;
       font-weight: bold;
       font-size: 18px;
     }
+
     &:last-of-type {
       font-family: $font-two;
       font-size: 14px;
@@ -165,6 +182,46 @@ section .container {
   margin: 0 0 20px 0;
 }
 
+/* Portfolio */
+
+.portfolio {
+  background: $color-three;
+}
+
+.portfolio-item {
+  margin: 0 0 40px 0;
+
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+.portfolio-description {
+  background: $color-light;
+  width: 300px;
+  margin: 0 auto;
+
+  p {
+    margin: 0;
+
+    &:first-of-type {
+      font-family: $font-one;
+      padding: 20px 0 0 0;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    &:last-of-type {
+      font-family: $font-two;
+      font-size: 14px;
+      color: $color-two;
+      padding: 0 0 20px 0;
+    }
+  }
+}
+
 /* Media */
 
 @media (max-width: 767px) {
@@ -172,22 +229,26 @@ section .container {
     padding: 12px 30px;
     font-size: 14px;
   }
-  .header {
-      height: 100vh;
-  }
-  .header-inner {
-      h1 {
-        margin: 40px 0 10px 0;
-        font-size: 20px;
-      }
 
-      h2 {
-        margin: 0 0 50px 0;
-        font-size: 40px;
-      }
+  .header {
+    height: 100vh;
   }
+
+  .header-inner {
+    h1 {
+      margin: 40px 0 10px 0;
+      font-size: 20px;
+    }
+
+    h2 {
+      margin: 0 0 50px 0;
+      font-size: 40px;
+    }
+  }
+
   .navigation {
     padding: 50px 20px 0 20px;
+
     i {
       display: block;
       color: $color-light;
@@ -195,33 +256,38 @@ section .container {
       float: right;
       cursor: pointer;
     }
+
     ul {
       display: none;
       position: absolute;
       top: 100px;
-      left:0;
+      left: 0;
       width: 100%;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0, 0, 0, 0.8);
       text-align: center;
       z-index: 3;
       padding: 20px 0;
+
       li {
         margin: 0;
         display: block;
       }
     }
+
     .open {
-    display: block;
+      display: block;
     }
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .header-inner {
-      h1 {
-        font-size: 30px;
-      }
-      h2 {
-        font-size: 50px;
-      }
+    h1 {
+      font-size: 30px;
     }
+
+    h2 {
+      font-size: 50px;
+    }
+  }
 }

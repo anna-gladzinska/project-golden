@@ -1,6 +1,8 @@
 /* Variables */
 /* Global */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -27,6 +29,7 @@ section .container {
 }
 
 .section-title {
+  text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
   font-weight: bold;
@@ -158,6 +161,46 @@ section .container {
 
 .services-item {
   margin: 0 0 20px 0;
+}
+
+/* Portfolio */
+.portfolio {
+  background: #f7f7f7;
+}
+
+.portfolio-item {
+  margin: 0 0 40px 0;
+}
+
+.portfolio-item img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.portfolio-description {
+  background: #fff;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.portfolio-description p {
+  margin: 0;
+}
+
+.portfolio-description p:first-of-type {
+  font-family: "Montserrat", sans-serif;
+  padding: 20px 0 0 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.portfolio-description p:last-of-type {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  color: #777777;
+  padding: 0 0 20px 0;
 }
 
 /* Media */
