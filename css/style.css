@@ -23,6 +23,7 @@ section {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .section-title {
@@ -136,6 +137,7 @@ section {
 /* Services */
 .services i {
   color: #fdd135;
+  box-sizing: content-box;
   border: 3px solid #fdd135;
   border-radius: 50%;
   font-size: 35px;
@@ -167,6 +169,10 @@ section {
 
 .portfolio-item {
   margin: 0 0 40px 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 .portfolio-item img {
@@ -174,6 +180,7 @@ section {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 0 auto;
 }
 
 .portfolio-description {
@@ -209,13 +216,15 @@ section {
   float: left;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
-  padding: 0 80px 0 0;
 }
 
 .page-footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
 }
 
 .page-footer ul li {
@@ -280,6 +289,13 @@ section {
   .navigation .open {
     display: block;
   }
+  .portfolio-item img {
+    width: 250px;
+    height: 250px;
+  }
+  .portfolio-description {
+    width: 250px;
+  }
   .page-footer {
     padding: 30px 0;
     text-align: center;
@@ -287,6 +303,9 @@ section {
   .page-footer p {
     padding: 0;
     float: none;
+  }
+  .page-footer ul {
+    width: auto;
   }
 }
 
@@ -296,6 +315,17 @@ section {
   }
   .header-inner h2 {
     font-size: 50px;
+  }
+  .page-footer {
+    padding: 30px 0;
+    text-align: center;
+  }
+  .page-footer p {
+    padding: 0;
+    float: none;
+  }
+  .page-footer ul {
+    width: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
